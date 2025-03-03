@@ -59,7 +59,9 @@ body {
 
 #clock
 {
-    font-size: 2em;
+    font-size: 6em;
     margin-top: 10px;
     font-weight: 700;
+    color: aliceblue;
+    z-index: 1;
 }
