@@ -35,6 +35,8 @@ body {
     display: flex;
     gap: 15px;
     z-index: 1;
+    flex-wrap: wrap;
+
 }
 
 .shortcut {

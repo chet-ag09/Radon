@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 shortcutText.style.marginRight = '10px';
 
                 const deleteButtonShort = document.createElement('button');
-                deleteButtonShort.textContent = 'X';
+                deleteButtonShort.textContent = 'x';
                 deleteButtonShort.style.cursor = 'pointer';
                 deleteButtonShort.addEventListener('click', () => deleteShortcut(index));
 
@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     shortcutNameInput.value = '';
                     shortcutUrlInput.value = '';
                     loadSettings();
+                    alert("Shortcut Added, Refresh to see!")
                 });
             } else {
                 alert("Shortcut already exists.");
