@@ -1,7 +1,13 @@
-# A COOL CHROME EXTENSION THAT HELPS IN RICING CHROME lol
+This is a WORK IN PROGRESS THIS IS NOT THE FINAL VERSION
+# Radon
+Radon is a chrome extension that lets you customize the new tab page. You can use CSS to write code to customize it!
 
-edit the css styling the home tab using this temp(make better pls):
+## How to install
+As of now, this project has not been published to chrome web store.
+So just clone this repo and import it into chrome.
 
+## How to use
+Below is an example code involving the main classes and id.
 ```
 body {
     margin: 0;
