@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Radon",
     "version": "1.0",
-    "description": "Make Chrome Customized",
+    "description": "Make Chrome Better",
     "host_permissions": ["*://*/*"],
     "action": {
       "default_popup": "src/popup.html"
