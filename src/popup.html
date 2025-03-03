@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radon</title>
-    <style>
-        body {
-            width: 300px;
-            padding: 10px;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 <body>
     <h1>Radon Home</h1>
@@ -21,20 +12,17 @@
     <label for="wallpaper">Wallpaper URL</label>
     <input type="text" id="wallpaper" placeholder="Enter image URL">
 
-    <label for="custom-css">Custom CSS:</label>
-    <textarea id="custom-css" placeholder="Enter custom CSS here..." rows="5"></textarea><br>
-    
-    <button id="save-css">Save CSS</button>
-    
-    
+
     <label for="shortcut-name">Shortcut Name</label>
     <input type="text" id="shortcut-name" placeholder="Enter name">
     <label for="shortcut-url">Shortcut URL</label>
     <input type="text" id="shortcut-url" placeholder="Enter URL"><br>
     <button id="add-shortcut">Add Shortcut</button>
 
+    <label for="custom-css">Custom CSS:</label>
+    <textarea id="custom-css" placeholder="Paste your code here..." rows="5"></textarea><br>    
     <button id="save">Save</button>
-
+<br>
     <script src="js/popup.js"></script>
 </body>
 </html>

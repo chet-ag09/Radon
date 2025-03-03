@@ -1,0 +1,73 @@
+body {
+    max-width: 300px;
+    width: 300px;
+    padding: 10px;
+    max-height: 500px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
+
+    background-color: rgb(23, 23, 23);
+    color: #c0c0c0;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1
+{
+    color: rgb(107, 35, 175);
+}
+
+label 
+{
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+button
+{
+    margin: 10px 10px;
+    background: rgb(107, 35, 175);
+    color: #c0c0c0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 1.2em;
+
+}
+
+button:hover
+{
+    background: rgb(86, 29, 140);
+    cursor: pointer;
+}
+
+#custom-css
+{
+    resize: none;
+    background: #404040;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    width: 200px;
+    height: 100px;
+    color: #c0c0c0;
+    flex-shrink: 0;
+}
+
+input
+{
+    background: #404040;
+    border: none;
+    font-size: 1.2em;
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 5px;
+    color: #c0c0c0;
+}
