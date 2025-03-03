@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    //VARS
     const wallpaperInput = document.getElementById('wallpaper');
     const shortcutNameInput = document.getElementById('shortcut-name');
     const shortcutUrlInput = document.getElementById('shortcut-url');
@@ -6,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveButton = document.getElementById('save');
     const shortcutsContainer = document.createElement('div');
     const customCSSInput = document.getElementById('custom-css');
-    const saveCSSButton = document.getElementById('save-css');
-    
+        
+    const toggleClockCheckbox = document.getElementById('toggle-clock');
+
     // Create Remove CSS Button
     let removeCSSButton = document.createElement('button');
     removeCSSButton.textContent = "Remove Custom CSS";
@@ -18,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(shortcutsContainer);
     document.body.appendChild(removeCSSButton); // Append to body
 
+
+    //FUNCTIONS
     function loadSettings() {
         chrome.storage.sync.get(['wallpaper', 'shortcuts', 'customCSS'], (data) => {
             shortcutsContainer.innerHTML = ''; // Clear UI before updating
@@ -95,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chrome.storage.sync.set({ customCSS: newCSS }, () => {
             applyCustomCSS(newCSS);
             removeCSSButton.style.display = 'block'; // Show button when CSS is added
-            alert('Custom CSS saved successfully!');
+            alert('Custom CSS saved successfully! Refresh!');
         });
     }
 
@@ -176,6 +181,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    //CLOCK------------
+    chrome.storage.sync.get(['showClock'], (data) => {
+        toggleClockCheckbox.checked = data.showClock ?? true; // Default to true
+    });
+
+    // Save setting when toggled
+    toggleClockCheckbox.addEventListener('change', () => {
+        chrome.storage.sync.set({ showClock: toggleClockCheckbox.checked }, () => {
+            alert('Clock visibility saved! Refresh page to see changes');
+        });
+    });
 
     addShortcutButton.addEventListener('click', addShortcut);
     saveButton.addEventListener('click', saveSettings);

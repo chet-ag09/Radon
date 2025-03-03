@@ -68,4 +68,11 @@ body {
     border-radius: 3px;
 }
 
+#clock 
+{
+    font-size: 2em;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
 ```

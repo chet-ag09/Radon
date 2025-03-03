@@ -43,4 +43,10 @@ chrome.storage.sync.get(['wallpaper', 'shortcuts', 'customCSS'], (data) => {
         styleTag.textContent = data.customCSS;
         document.head.appendChild(styleTag);
     }
+
+    const clockElement = document.getElementById('clock');
+    chrome.storage.sync.get(['showClock'], (data) => {
+        clockElement.style.display = data.showClock ? 'block' : 'none';
+    });
+
 });
