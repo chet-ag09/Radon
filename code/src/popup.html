@@ -11,21 +11,30 @@
 
     <label for="wallpaper">Wallpaper URL:</label>
     <input type="text" id="wallpaper" placeholder="Enter image URL">
-    
-    <label for="toggle-clock">Show Clock:</label>
-    <input type="checkbox" id="toggle-clock">
 
-    <label for="toggle-search">Show Search Bar:</label>
-    <input type="checkbox" id="toggle-search">
-    
     <label for="shortcut-name">Shortcut Name:</label>
     <input type="text" id="shortcut-name" placeholder="Enter name">
     <label for="shortcut-url">Shortcut URL:</label>
     <input type="text" id="shortcut-url" placeholder="Enter URL"><br>
     <button id="add-shortcut">Add Shortcut</button>
 
+    
     <label for="custom-css">Custom CSS:</label>
     <textarea id="custom-css" placeholder="Paste your code here..." rows="5"></textarea><br>    
+
+        
+    <p>Show Clock:</p>
+    <label class="toggle">
+        <input type="checkbox" id="toggle-clock">
+        <span class="slider"></span><br><br>
+    </label>
+    
+    <p>Show Search Bar: </p>
+    <label class="toggle">
+        <input type="checkbox" id="toggle-search">
+        <span class="slider"></span><br><br>
+    </label>
+    
     <button id="save">Save</button>
 <br>
     <script src="js/popup.js"></script>

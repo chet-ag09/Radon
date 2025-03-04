@@ -97,3 +97,16 @@ body {
 ::-webkit-input-placeholder {
     color:    rgb(255, 255, 255);
 }
+
+:root {
+    --tab-bar-color: #ffffff; /* Default color */
+}
+
+#tab-bar {
+    background-color: var(--tab-bar-color);
+    height: 50px; /* Adjust height if needed */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 favicon.style.marginRight = '10px';
 
                 favicon.onerror = () => {
-                    favicon.src = 'default-icon.png';
+                    favicon.src = '../src/imgs/ico.png';
                 };
 
                 const shortcutText = document.createElement('span');

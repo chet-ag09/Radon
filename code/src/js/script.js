@@ -54,4 +54,10 @@ chrome.storage.sync.get(['wallpaper', 'shortcuts', 'customCSS'], (data) => {
         searchElement.style.display = data.showSearch ? 'block' : 'none';
     });
 
+    chrome.storage.sync.get(['tabBarColor'], (data) => {
+        if (data.tabBarColor) {
+            document.documentElement.style.setProperty('--tab-bar-color', data.tabBarColor);
+        }
+    });
+
 });
