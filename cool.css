@@ -23,7 +23,7 @@ body {
     bottom: 0;
     background-size: cover;
     background-position: center;
-    filter: blur(5px); /*adjust blur*/
+    filter: blur(100px); /*adjust blur*/
     opacity: 1; /*adjust opacity of wallpaper*/
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .shortcut:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 0, 0, 0.4);
 }
 
 .shortcut img {

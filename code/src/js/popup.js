@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const customCSSInput = document.getElementById('custom-css');
         
     const toggleClockCheckbox = document.getElementById('toggle-clock');
+    const toggleSearchCheckbox = document.getElementById('toggle-search');
 
     // Create Remove CSS Button
     let removeCSSButton = document.createElement('button');
@@ -194,6 +195,20 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Clock visibility saved! Refresh page to see changes');
         });
     });
+
+
+ //Search------------
+    chrome.storage.sync.get(['showSearch'], (data) => {
+        toggleSearchCheckbox.checked = data.showSearch ?? true; // Default to true
+    });
+
+    // Save setting when toggled
+    toggleSearchCheckbox.addEventListener('change', () => {
+        chrome.storage.sync.set({ showSearch: toggleSearchCheckbox.checked }, () => {
+            alert('Search visibility saved! Refresh page to see changes');
+        });
+    });
+
 
     addShortcutButton.addEventListener('click', addShortcut);
     saveButton.addEventListener('click', saveSettings);

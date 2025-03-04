@@ -49,4 +49,9 @@ chrome.storage.sync.get(['wallpaper', 'shortcuts', 'customCSS'], (data) => {
         clockElement.style.display = data.showClock ? 'block' : 'none';
     });
 
+    const searchElement = document.getElementById('search_bar');
+    chrome.storage.sync.get(['showSearch'], (data) => {
+        searchElement.style.display = data.showSearch ? 'block' : 'none';
+    });
+
 });

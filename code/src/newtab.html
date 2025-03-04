@@ -10,7 +10,14 @@
 <body>
     <div class="custom-tab">
         <h1 id="clock">0:00</h1>
+
         <div id="wallpaper" class="wallpaper"></div>
+
+        <form method="get" id="search_bar" action="https://www.google.com/search?g=">
+            <input name="sitesearch" type="hidden">
+            <input autocomplete="on" class="form-control search" name="q" placeholder="Search..." required="required"  type="text">
+        </form>
+            
         
         <div id="shortcuts" class="shortcuts">
             <!-- Shortcuts will go here -->
