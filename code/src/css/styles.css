@@ -47,6 +47,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+
 }
 
 .shortcut:hover {
@@ -87,4 +88,12 @@ body {
     transition: background 0.3s ease-in-out;
     border-radius: 8px;
     height: 26px;
+    font-size: 1.3em;
+    
+    width: 400px; /*Adjust search bar width*/
+}
+
+/*Color of search bar placeholder*/
+::-webkit-input-placeholder {
+    color:    rgb(255, 255, 255);
 }

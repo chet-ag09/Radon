@@ -38,6 +38,7 @@ button
     border-radius: 5px;
     padding: 10px 10px;
     font-size: 1.2em;
+    transition: 0.3s;
 
 }
 
@@ -59,6 +60,8 @@ button:hover
     height: 100px;
     color: #c0c0c0;
     flex-shrink: 0;
+    outline: none;
+
 }
 
 input
@@ -69,5 +72,6 @@ input
     padding: 10px 10px;
     width: 200px;
     border-radius: 5px;
+    outline: none;
     color: #c0c0c0;
 }
