@@ -210,6 +210,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    document.getElementById("saveBinding").addEventListener("click", () => {
+        const keybinding = document.getElementById("keybinding").value.trim();
+        const website = document.getElementById("website").value.trim();
+    
+        if (keybinding && website) {
+            chrome.storage.sync.get(["keyBindings"], (data) => {
+                const keyBindings = data.keyBindings || {};
+                keyBindings[keybinding] = website;
+    
+                chrome.storage.sync.set({ keyBindings }, () => {
+                    alert("Key binding saved!");
+                    displayBindings();
+                });
+            });
+        }
+    });
+    
+    function displayBindings() {
+        chrome.storage.sync.get(["keyBindings"], (data) => {
+            const bindingsList = document.getElementById("bindingsList");
+            bindingsList.innerHTML = ""; // Clear list
+    
+            const keyBindings = data.keyBindings || {};
+            Object.entries(keyBindings).forEach(([key, url]) => {
+                const item = document.createElement("div");
+                item.innerHTML = `${key} → ${url} <button data-key="${key}" class="removeBinding">Remove</button>`;
+                bindingsList.appendChild(item);
+            });
+    
+            // Add event listeners to remove buttons
+            document.querySelectorAll(".removeBinding").forEach(button => {
+                button.addEventListener("click", (event) => {
+                    const keyToRemove = event.target.getAttribute("data-key");
+                    chrome.storage.sync.get(["keyBindings"], (data) => {
+                        const keyBindings = data.keyBindings || {};
+                        delete keyBindings[keyToRemove];
+    
+                        chrome.storage.sync.set({ keyBindings }, () => {
+                            displayBindings();
+                        });
+                    });
+                });
+            });
+        });
+    }
+    
+    displayBindings();
+    
+
+
     addShortcutButton.addEventListener('click', addShortcut);
     saveButton.addEventListener('click', saveSettings);
 

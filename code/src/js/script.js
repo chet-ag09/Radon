@@ -60,4 +60,15 @@ chrome.storage.sync.get(['wallpaper', 'shortcuts', 'customCSS'], (data) => {
         }
     });
 
+    document.addEventListener("keydown", function(event) {
+        chrome.storage.sync.get(["keyBindings"], (data) => {
+            const keyBindings = data.keyBindings || {};
+            const pressedKey = (event.ctrlKey ? "Ctrl+" : "") + (event.altKey ? "Alt+" : "") + (event.shiftKey ? "Shift+" : "") + event.key.toUpperCase();
+    
+            if (keyBindings[pressedKey]) {  
+                window.open(keyBindings[pressedKey], "_self");
+                event.preventDefault();
+            }
+        });
+    }); 
 });
