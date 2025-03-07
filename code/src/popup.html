@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radon</title>
     <link rel="stylesheet" href="css/popup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Radon Home</h1>
 
-    <label for="wallpaper">Wallpaper URL:</label>
-    <input type="text" id="wallpaper" placeholder="Enter image URL">
+    <div class="input-group">
+        <label for="wallpaper">Wallpaper</label>
+        <input type="text" id="wallpaper" placeholder="Enter image URL">
+        <button class="delete_wallpaper">X</button>
+    </div>
 
     <label for="shortcut-name">Shortcut Name:</label>
-    <input type="text" id="shortcut-name" placeholder="Enter name">
+    <input type="text" id="shortcut-name" placeholder="Enter name"><br>
     <label for="shortcut-url">Shortcut URL:</label>
     <input type="text" id="shortcut-url" placeholder="Enter URL"><br>
-    <button id="add-shortcut">Add Shortcut</button>
+    <button id="add-shortcut">Add Shortcut</button><br>
 
     <label for="keybinding">Key Binding:</label>
-    <input type="text" id="keybinding" placeholder="e.g., Ctrl+Y">
+    <input type="text" id="keybinding" placeholder="e.g., Ctrl+Y"><br>
     
     <label for="website">Website URL:</label>
-    <input type="text" id="website" placeholder="https://example.com">
+    <input type="text" id="website" placeholder="https://example.com"><br>
     
     <button id="saveBinding">Save Binding</button>
     
     <h3>Saved Key Bindings</h3>
     <div id="bindingsList"></div>
-    
-
     
     <label for="custom-css">Custom CSS:</label>
     <textarea id="custom-css" placeholder="Paste your code here..." rows="5"></textarea><br>    
@@ -38,14 +43,14 @@
     <p>Show Clock:</p>
     <label class="toggle">
         <input type="checkbox" id="toggle-clock">
-        <span class="slider"></span><br><br>
+        <span class="slider"></span>
     </label>
     
     <p>Show Search Bar: </p>
     <label class="toggle">
         <input type="checkbox" id="toggle-search">
-        <span class="slider"></span><br><br>
-    </label>
+        <span class="slider"></span>
+    </label><br>
     
     <button id="save">Save</button>
 <br>

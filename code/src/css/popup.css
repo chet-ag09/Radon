@@ -1,102 +1,94 @@
+/* Container settings applied to the body */
 body {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
     max-width: 300px;
     width: 300px;
-    padding: 10px;
-    max-height: 500px;
-    height: 500px;
-    overflow-y: auto;
-    overflow-x: auto;
-
-    background-color: rgb(23, 23, 23);
-    color: #c0c0c0;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    padding: 8px;
+    margin: 0 auto;
 }
 
-h1
-{
+/* Header */
+h1 {
     color: rgb(107, 35, 175);
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-p
-{
-    font-size: 1.2em;
-}
-
-label 
-{
+/* Labels */
+label {
+    margin-bottom: 3px;
     display: block;
-    margin-top: 10px;
-    font-size: 1.2em;
 }
 
-button
-{
-    margin: 10px 10px;
-    background: rgb(107, 35, 175);
-    color: #c0c0c0;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 10px;
-    font-size: 1.2em;
-    transition: 0.3s;
-
+/* Input group for inline input and button */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Space between input and button */
 }
 
-button:hover
-{
-    background: rgb(86, 29, 140);
-    cursor: pointer;
-}
-
-#custom-css
-{
-    resize: none;
+/* Text inputs */
+input {
     background: #404040;
     border: none;
-    padding: 10px 10px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    width: 100%;    
-    height: 100px;
-    color: #c0c0c0;
-    flex-shrink: 0;
-    outline: none;
-
-}
-
-input
-{
-    background: #404040;
-    border: none;
-    font-size: 1.2em;
-    padding: 10px 10px;
+    padding: 6px;
     border-radius: 5px;
     outline: none;
     color: #c0c0c0;
     width: 100%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
 }
 
+/* Buttons */
+button {
+    background: rgb(107, 35, 175);
+    color: #c0c0c0;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    transition: 0.3s;
+    display: block;
+    white-space: nowrap;
+}
+button:hover {
+    background: rgb(86, 29, 140);
+    cursor: pointer;
+}
 
+/* Custom CSS textarea */
+#custom-css {
+    resize: none;
+    background: #404040;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    width: 100%;
+    height: 60px;
+    color: #c0c0c0;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+/* Toggle switch container */
 .toggle {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 40px;
+    height: 20px;
+    margin-bottom: 4px;
 }
 
-
+/* Hide default checkbox */
 .toggle input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-
+/* Toggle slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -106,26 +98,24 @@ input
     bottom: 0;
     background-color: gray;
     transition: 0.4s;
-    border-radius: 34px;
+    border-radius: 20px;
 }
-
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
     transition: 0.4s;
     border-radius: 50%;
 }
 
-
+/* Toggle when checked */
 input:checked + .slider {
-    background-color:rgb(107, 35, 175);
+    background-color: rgb(107, 35, 175);
 }
-
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(20px);
 }

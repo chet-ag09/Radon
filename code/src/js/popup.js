@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveButton = document.getElementById('save');
     const shortcutsContainer = document.createElement('div');
     const customCSSInput = document.getElementById('custom-css');
-        
+    const deleteWallpaperButton = document.querySelector('.delete_wallpaper');
     const toggleClockCheckbox = document.getElementById('toggle-clock');
     const toggleSearchCheckbox = document.getElementById('toggle-search');
 
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(shortcutsContainer);
     document.body.appendChild(removeCSSButton); // Append to body
 
+    deleteWallpaperButton.addEventListener('click', deleteWallpaper);   
 
     //FUNCTIONS
     function loadSettings() {
@@ -40,15 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 wallpaperInput.value = data.wallpaper;
             }
 
-            if (data.wallpaper) {
-                const wallpaperDeleteBtn = document.createElement('button');
-                wallpaperDeleteBtn.textContent = "Delete Wallpaper";
-                wallpaperDeleteBtn.style.display = 'block';
-                wallpaperDeleteBtn.style.marginTop = '10px';
-                wallpaperDeleteBtn.style.cursor = 'pointer';
-                wallpaperDeleteBtn.addEventListener('click', deleteWallpaper);
-                shortcutsContainer.appendChild(wallpaperDeleteBtn);
-            }
+
 
             const shortcuts = data.shortcuts || [];
             shortcuts.forEach((shortcut, index) => {
