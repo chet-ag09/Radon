@@ -14,9 +14,9 @@
     <h1>Radon Home</h1>
 
     <div class="input-group">
-        <label for="wallpaper">Wallpaper</label>
+        <label for="wallpaper">Wallpaper:</label>
         <input type="text" id="wallpaper" placeholder="Enter image URL">
-        <button class="delete_wallpaper">X</button>
+        <button class="delete_wallpaper">x</button>
     </div>
 
     <label for="shortcut-name">Shortcut Name:</label>
@@ -25,16 +25,19 @@
     <input type="text" id="shortcut-url" placeholder="Enter URL"><br>
     <button id="add-shortcut">Add Shortcut</button><br>
 
+    
     <label for="keybinding">Key Binding:</label>
     <input type="text" id="keybinding" placeholder="e.g., Ctrl+Y"><br>
     
     <label for="website">Website URL:</label>
     <input type="text" id="website" placeholder="https://example.com"><br>
-    
+
     <button id="saveBinding">Save Binding</button>
     
+    <div class="keys-box">
     <h3>Saved Key Bindings</h3>
     <div id="bindingsList"></div>
+    </div>
     
     <label for="custom-css">Custom CSS:</label>
     <textarea id="custom-css" placeholder="Paste your code here..." rows="5"></textarea><br>    

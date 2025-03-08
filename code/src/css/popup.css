@@ -1,4 +1,4 @@
-/* Container settings applied to the body */
+
 body {
     background-color: rgb(19, 19, 19);
     color: white;
@@ -7,6 +7,7 @@ body {
     width: 300px;
     padding: 8px;
     margin: 0 auto;
+    font-size: medium;
 }
 
 /* Header */
@@ -18,7 +19,7 @@ h1 {
 
 /* Labels */
 label {
-    margin-bottom: 3px;
+    margin-bottom: 5%;
     display: block;
 }
 
@@ -38,7 +39,7 @@ input {
     outline: none;
     color: #c0c0c0;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 5%;
     box-sizing: border-box;
 }
 
@@ -51,6 +52,7 @@ button {
     padding: 6px 10px;
     transition: 0.3s;
     display: block;
+    margin-bottom: 5%;
     white-space: nowrap;
 }
 button:hover {
@@ -65,11 +67,19 @@ button:hover {
     border: none;
     padding: 6px;
     border-radius: 5px;
-    width: 100%;
+    width: 96%;
     height: 60px;
     color: #c0c0c0;
     outline: none;
     margin-bottom: 8px;
+    margin-right: 5px;
+}
+
+.keys-box
+{
+    border: 2px #404040;
+    border-style: solid;
+    padding: 5px;
 }
 
 /* Toggle switch container */
