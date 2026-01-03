@@ -9,7 +9,7 @@ FEATURES:
 - A search Bar
 - A clock
 
-## How to install
+## install
 As of now, this project has not been published to chrome web store.
 So just clone this repo and import it into chrome.
 
