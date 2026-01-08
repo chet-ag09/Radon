@@ -8,11 +8,6 @@ FEATURES:
 - Shortcuts
 - A search Bar
 - A clock
-
-## install
-As of now, this project has not been published to chrome web store.
-So just clone this repo and import it into chrome.
-
 ## Example
 <img src="code/src/imgs/example.png">
 
