@@ -1,11 +1,10 @@
-# Radon
-chrome customizer i suppose
+<h1 align="center">RADON</h1>
+for replacing boring ahh chrome home page
 
-## Example
+
 <img src="code/src/imgs/example.png">
 
-## How to use
-Below is an example code involving the main classes and id.
+example code
 ```
 body {
     margin: 0;
