@@ -1,13 +1,6 @@
 # Radon
-Radon is a chrome extension that lets you customize the new tab page. You can use CSS to write code to customize it!
+chrome customizer i suppose
 
-FEATURES:
-- Custom CSS
-- Keybindings to open websites
-- Wallpapers
-- Shortcuts
-- A search Bar
-- A clock
 ## Example
 <img src="code/src/imgs/example.png">
 
