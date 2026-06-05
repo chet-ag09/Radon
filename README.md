@@ -106,3 +106,5 @@ body {
     color:    rgb(255, 255, 255);
 }
 ```
+todo:
+1. re the popup.html ui its so ass and impractical
