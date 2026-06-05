@@ -1,23 +1,10 @@
-# Radon
-Radon is a chrome extension that lets you customize the new tab page. You can use CSS to write code to customize it!
+<h1 align="center">RADON</h1>
+for replacing boring ahh chrome home page
 
-FEATURES:
-- Custom CSS
-- Keybindings to open websites
-- Wallpapers
-- Shortcuts
-- A search Bar
-- A clock
 
-## How to install
-As of now, this project has not been published to chrome web store.
-So just clone this repo and import it into chrome.
-
-## Example
 <img src="code/src/imgs/example.png">
 
-## How to use
-Below is an example code involving the main classes and id.
+example code
 ```
 body {
     margin: 0;
