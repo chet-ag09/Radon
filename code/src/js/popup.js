@@ -110,21 +110,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function saveSettings() {
+    function saveWallpaper() {
         const newWallpaper = wallpaperInput.value.trim();
         const newCSS = customCSSInput.value.trim();
 
-        chrome.storage.sync.get(['wallpaper', 'shortcuts'], (data) => {
-            let shortcuts = data.shortcuts || [];
+        chrome.storage.sync.get(['wallpaper'], (data) => {
             let wallpaper = data.wallpaper || '';
 
             if (newWallpaper) {
                 wallpaper = newWallpaper;
             }
 
-            chrome.storage.sync.set({ wallpaper, shortcuts, customCSS: newCSS }, () => {
-                console.log('Settings saved');
-                alert('Settings saved successfully!');
+            chrome.storage.sync.set({wallpaper}, () => {
+                console.log('Wallpaper saved');
+                alert('Wallpaper Saved');
                 applyCustomCSS(newCSS);
                 loadSettings();
             });
@@ -134,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function deleteWallpaper() {
         chrome.storage.sync.set({ wallpaper: '' }, () => {
             console.log('Wallpaper deleted');
-            alert('Wallpaper has been removed.');
+            wallpaperInput.value = "";
             loadSettings();
         });
     }
@@ -179,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //CLOCK------------
     chrome.storage.sync.get(['showClock'], (data) => {
-        toggleClockCheckbox.checked = data.showClock ?? true; // Default to true
+        toggleClockCheckbox.checked = data.showClock?? true; // Default to true
     });
 
     // Save setting when toggled
@@ -251,10 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     displayBindings();
     
-
-
     addShortcutButton.addEventListener('click', addShortcut);
-    saveButton.addEventListener('click', saveSettings);
+    saveButton.addEventListener('click', saveWallpaper);
 
     loadSettings();
 });

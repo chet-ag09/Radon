@@ -8,15 +8,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Radon</h1>
+    <h1>Radon // <span>Config</span></h1>
 
     <div class="input-group">
         <label for="wallpaper">Wallpaper:</label>
         <input type="text" id="wallpaper" placeholder="Enter image URL">
-        <button class="delete_wallpaper">x</button>
+        <button id="save">+</button>
+        <button class="delete_wallpaper">-</button>
     </div>
 
     <label for="shortcut-name">Shortcut Name:</label>
@@ -37,12 +37,11 @@
     <div class="keys-box">
     <h3>Saved Key Bindings</h3>
     <div id="bindingsList"></div>
-    </div>
+    </div><br>
     
     <label for="custom-css">Custom CSS:</label>
     <textarea id="custom-css" placeholder="Paste your code here..." rows="5"></textarea><br>    
-
-        
+    <section class="additional"></section>    
     <p>Show Clock:</p>
     <label class="toggle">
         <input type="checkbox" id="toggle-clock">
@@ -54,8 +53,8 @@
         <input type="checkbox" id="toggle-search">
         <span class="slider"></span>
     </label><br>
+
     
-    <button id="save">Save</button>
 <br>
     <script src="js/popup.js"></script>
 </body>
