@@ -12,36 +12,44 @@
 <body>
     <h1>Radon // <span>Config</span></h1>
 
-    <div class="input-group">
-        <label for="wallpaper">Wallpaper:</label>
-        <input type="text" id="wallpaper" placeholder="Enter image URL">
-        <button id="save">+</button>
-        <button class="delete_wallpaper">-</button>
+    <div class="sec">
+            <p for="wallpaper">Wallpaper:</p>
+        <div class="input-group">
+            <input type="text" id="wallpaper" placeholder="Enter image URL">
+            <button id="save">+</button>
+            <button class="delete_wallpaper">-</button>
+        </div>
+
+    </div>
+        <div class="sec">
+        <label for="shortcut-name">Shortcut Name:</label>
+        <input type="text" id="shortcut-name" placeholder="Enter name"><br>
+        <label for="shortcut-url">Shortcut URL:</label>
+        <input type="text" id="shortcut-url" placeholder="Enter URL"><br>
+        <button id="add-shortcut">Add Shortcut</button><br>
+    </div>
+    
+    <div class="sec">
+        <label for="keybinding">Key Binding:</label>
+        <input type="text" id="keybinding" placeholder="e.g., Ctrl+Y"><br>
+        <label for="website">Website URL:</label>
+        <input type="text" id="website" placeholder="https://example.com"><br>
+        <button id="saveBinding">Save Binding</button>
     </div>
 
-    <label for="shortcut-name">Shortcut Name:</label>
-    <input type="text" id="shortcut-name" placeholder="Enter name"><br>
-    <label for="shortcut-url">Shortcut URL:</label>
-    <input type="text" id="shortcut-url" placeholder="Enter URL"><br>
-    <button id="add-shortcut">Add Shortcut</button><br>
+    <div class="sec">
+        <h3>Saved Key Bindings</h3>
+        <div class="keys-box">
+        <div id="bindingsList"></div>
+        </div>
+    </div>
+    
+    <div class="sec">
+        <label for="custom-css">Custom CSS:</label>
+        <textarea id="custom-css" placeholder="Paste your code here..." rows="5"></textarea>  
+    </div>
 
-    
-    <label for="keybinding">Key Binding:</label>
-    <input type="text" id="keybinding" placeholder="e.g., Ctrl+Y"><br>
-    
-    <label for="website">Website URL:</label>
-    <input type="text" id="website" placeholder="https://example.com"><br>
-
-    <button id="saveBinding">Save Binding</button>
-    
-    <div class="keys-box">
-    <h3>Saved Key Bindings</h3>
-    <div id="bindingsList"></div>
-    </div><br>
-    
-    <label for="custom-css">Custom CSS:</label>
-    <textarea id="custom-css" placeholder="Paste your code here..." rows="5"></textarea><br>    
-    <section class="additional"></section>    
+    <div class="sec">
     <p>Show Clock:</p>
     <label class="toggle">
         <input type="checkbox" id="toggle-clock">
@@ -53,7 +61,7 @@
         <input type="checkbox" id="toggle-search">
         <span class="slider"></span>
     </label><br>
-
+    </div>
     
 <br>
     <script src="js/popup.js"></script>

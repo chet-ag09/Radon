@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             shortcuts.forEach((shortcut, index) => {
                 const shortcutElement = document.createElement('div');
                 shortcutElement.style.display = 'flex';
+                shortcutElement.classList.add("sec");
                 shortcutElement.style.alignItems = 'center';
                 shortcutElement.style.marginTop = '5px';
 
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const deleteButtonShort = document.createElement('button');
                 deleteButtonShort.textContent = 'x';
                 deleteButtonShort.style.cursor = 'pointer';
+                deleteButtonShort.style.marginTop = "10px";
                 deleteButtonShort.addEventListener('click', () => deleteShortcut(index));
 
                 shortcutElement.appendChild(favicon);
@@ -184,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Save setting when toggled
     toggleClockCheckbox.addEventListener('change', () => {
         chrome.storage.sync.set({ showClock: toggleClockCheckbox.checked }, () => {
-            alert('Clock visibility saved! Refresh page to see changes');
+            console.log("Refresh to see");
         });
     });
 
@@ -197,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Save setting when toggled
     toggleSearchCheckbox.addEventListener('change', () => {
         chrome.storage.sync.set({ showSearch: toggleSearchCheckbox.checked }, () => {
-            alert('Search visibility saved! Refresh page to see changes');
+            console.log('Refresh to see changes.');
         });
     });
 
@@ -212,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 keyBindings[keybinding] = website;
     
                 chrome.storage.sync.set({ keyBindings }, () => {
-                    alert("Key binding saved!");
                     displayBindings();
                 });
             });
@@ -227,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const keyBindings = data.keyBindings || {};
             Object.entries(keyBindings).forEach(([key, url]) => {
                 const item = document.createElement("div");
-                item.innerHTML = `${key} → ${url} <button data-key="${key}" class="removeBinding">Remove</button>`;
+                item.innerHTML = `${key} → ${url} <button data-key="${key}" class="removeBinding">x</button>`;
                 bindingsList.appendChild(item);
             });
     
@@ -238,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     chrome.storage.sync.get(["keyBindings"], (data) => {
                         const keyBindings = data.keyBindings || {};
                         delete keyBindings[keyToRemove];
-    
+                                
                         chrome.storage.sync.set({ keyBindings }, () => {
                             displayBindings();
                         });
